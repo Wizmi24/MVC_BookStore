@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MyBook.DataAccess.Repository.IRepository;
-using MyBook.DataAccess;
+using MyBook.DataAccess.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
