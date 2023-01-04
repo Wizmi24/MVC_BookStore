@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using MyBook.Models;
 
-namespace MyBook.DataAccess.Data
+namespace MyBook.DataAccess
 {
     public class ApplicationDbContext : IdentityDbContext
     {
