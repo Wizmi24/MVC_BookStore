@@ -4,6 +4,7 @@ using MyBook.Models;
 
 namespace MyBook.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CoverTypeController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

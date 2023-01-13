@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MyBook.Models;
 
-namespace MyBook.DataAccess
+namespace MyBook.DataAccess.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

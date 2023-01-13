@@ -1,5 +1,5 @@
 ﻿using MyBook.DataAccess.Repository.IRepository;
-using MyBook.DataAccess;
+using MyBook.DataAccess.Data;
 using MyBook.Models;
 using System;
 using System.Collections.Generic;

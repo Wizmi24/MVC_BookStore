@@ -6,6 +6,7 @@ using System.Diagnostics;
 
 namespace MyBook.Controllers
 {
+    [Area("Customer")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
