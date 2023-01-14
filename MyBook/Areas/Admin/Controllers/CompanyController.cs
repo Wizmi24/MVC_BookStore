@@ -41,7 +41,7 @@ namespace MyBook.Areas.Admin.Controllers
         //post
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upsert(Company obj, IFormFile file)
+        public IActionResult Upsert(Company obj, IFormFile? file)
         {
             if (ModelState.IsValid)
             {
