@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using MyBook.DataAccess.Repository.IRepository;
 using MyBook.Models;
 using MyBook.Models.ViewModels;
+using MyBook.Utility;
 using System.Diagnostics;
 using System.Security.Claims;
 
@@ -51,14 +52,14 @@ namespace MyBook.Controllers
             if (cartFromDb==null)
             {
                 _unitOfWork.ShoppingCart.Add(shoppingCart);
+                _unitOfWork.Save();
+                HttpContext.Session.SetInt32(SD.SessionCart, _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == claim.Value).ToList().Count);
             }
             else
             {
                 _unitOfWork.ShoppingCart.IncrementCount(cartFromDb, shoppingCart.Count);
+                _unitOfWork.Save();
             }
-
-            
-            _unitOfWork.Save();
 
             return RedirectToAction(nameof(Index));
         }
