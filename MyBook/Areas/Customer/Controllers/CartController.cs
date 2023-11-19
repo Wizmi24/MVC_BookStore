@@ -133,7 +133,7 @@ namespace MyBook.Areas.Customer.Controllers
             if (applicationUser.CompanyId.GetValueOrDefault() == 0)
             {
                 //stripe settings
-                var domain = "https://localhost:44353/";
+                var domain = "https://wizmi.azurewebsites.net/";
                 var options = new SessionCreateOptions
                 {
                     PaymentMethodTypes = new List<string>
